@@ -1,4 +1,4 @@
-﻿# Copyright 2025 Optuna, HuggingFace Inc. and the OmniTune team.
+# Copyright 2025 Optuna, HuggingFace Inc. and the OmniTune team.
 #
 # This code is inspired by the HuggingFace's transformers library.
 # https://github.com/huggingface/transformers/blob/v4.40.0/src/transformers/utils/logging.py
@@ -80,7 +80,7 @@ class _Logger(logging.Logger):
 
 def _get_default_logging_level() -> "logging._Level":
     r"""Return the default logging level."""
-    env_level_str = os.getenv("LLAMAFACTORY_VERBOSITY", None)
+    env_level_str = os.getenv("OMNITUNE_VERBOSITY", os.getenv("LLAMAFACTORY_VERBOSITY", None))
     if env_level_str:
         if env_level_str.upper() in logging._nameToLevel:
             return logging._nameToLevel[env_level_str.upper()]
