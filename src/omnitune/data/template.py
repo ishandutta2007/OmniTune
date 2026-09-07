@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -1438,11 +1438,10 @@ register_template(
     format_system=StringFormatter(slots=["<|im_start|>system\n{{content}}<|im_end|>\n"]),
     format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
     default_system=(
-        "You are an AI assistant whose name is InternLM (书生·浦语).\n"
-        "- InternLM (书生·浦语) is a conversational language model that is developed by Shanghai AI Laboratory "
-        "(上海人工智能实验室). It is designed to be helpful, honest, and harmless.\n"
-        "- InternLM (书生·浦语) can understand and communicate fluently in the language "
-        "chosen by the user such as English and 中文."
+        "You are an AI assistant whose name is InternLM.\n"
+        "- InternLM is a conversational language model that is developed by Shanghai AI Laboratory. "
+        "It is designed to be helpful, honest, and harmless.\n"
+        "- InternLM can understand and communicate fluently in the language chosen by the user."
     ),
     stop_words=["<|im_end|>"],
 )
@@ -1455,7 +1454,8 @@ register_template(
     format_system=StringFormatter(slots=["<|im_start|>system\n{{content}}<|im_end|>\n"]),
     format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
     default_system=(
-        "你是书生·万象，英文名是InternVL，是由上海人工智能实验室、清华大学及多家合作单位联合开发的多模态大语言模型。"
+        "You are InternVL, a multimodal large language model jointly developed by Shanghai AI Laboratory, "
+        "Tsinghua University, and multiple partner institutions."
     ),
     stop_words=["<|im_end|>"],
     mm_plugin=get_mm_plugin(name="intern_vl", image_token="<image>", video_token="<video>"),
@@ -1560,7 +1560,7 @@ register_template(
     name="llama2_zh",
     format_user=StringFormatter(slots=[{"bos_token"}, "[INST] {{content}} [/INST]"]),
     format_system=StringFormatter(slots=["<<SYS>>\n{{content}}\n<</SYS>>\n\n"]),
-    default_system="You are a helpful assistant. 你是一个乐于助人的助手。",
+    default_system="You are a helpful assistant.",
     template_class=Llama2Template,
 )
 
@@ -2472,7 +2472,8 @@ register_template(
     format_user=StringFormatter(slots=["<_user>{{content}}<_bot>"]),
     format_system=StringFormatter(slots=["<_system>{{content}}"]),
     default_system=(
-        "你是中国电信星辰语义大模型，英文名是TeleChat，你是由中电信人工智能科技有限公司和中国电信人工智能研究院（TeleAI）研发的人工智能助手。"
+        "You are TeleChat, an artificial intelligence assistant developed by China Telecom Artificial Intelligence "
+        "Technology Co., Ltd. and China Telecom Artificial Intelligence Research Institute (TeleAI)."
     ),
 )
 
@@ -2503,9 +2504,9 @@ register_template(
     name="xuanyuan",
     format_user=StringFormatter(slots=["Human: {{content}} Assistant:"]),
     default_system=(
-        "以下是用户和人工智能助手之间的对话。用户以Human开头，人工智能助手以Assistant开头，"
-        "会对人类提出的问题给出有帮助、高质量、详细和礼貌的回答，并且总是拒绝参与与不道德、"
-        "不安全、有争议、政治敏感等相关的话题、问题和指示。\n"
+        "The following is a conversation between a human and an AI assistant. The user begins with Human, "
+        "and the AI assistant begins with Assistant, providing helpful, high-quality, detailed, and polite answers, "
+        "while refusing to engage in harmful, unsafe, or unethical topics.\n"
     ),
 )
 
@@ -2527,9 +2528,7 @@ register_template(
     default_system=(
         "This is a chat between an inquisitive human and an AI assistant. "
         "Assume the role of the AI assistant. Read all the images carefully, "
-        "and respond to the human's questions with informative, helpful, detailed and polite answers. "
-        "这是一个好奇的人类和一个人工智能助手之间的对话。假设你扮演这个AI助手的角色。"
-        "仔细阅读所有的图像，并对人类的问题做出信息丰富、有帮助、详细的和礼貌的回答。\n\n"
+        "and respond to the human's questions with informative, helpful, detailed and polite answers.\n\n"
     ),
     stop_words=["###"],
     efficient_eos=True,

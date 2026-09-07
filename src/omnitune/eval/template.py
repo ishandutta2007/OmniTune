@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ _register_eval_template(
 
 _register_eval_template(
     name="zh",
-    system="以下是中国关于{subject}考试的单项选择题，请选出其中的正确答案。\n\n",
+    system="The following are multiple choice questions (with answers) about {subject}.\n\n",
     choice="\n{choice}. {content}",
-    answer="\n答案：",
+    answer="\nAnswer: ",
 )

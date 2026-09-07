@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 # Copyright (c) 2023-2025, Songlin Yang, Yu Zhang
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -252,7 +252,7 @@ def chunk_scaled_dot_kkt_fwd_kernel_intra_sub_intra(
                 b_kt = tl.load(p_kt, mask=m_k, other=0).to(tl.float32)
                 b_gk = tl.load(p_gk, mask=m_k, other=0).to(tl.float32)
                 b_A = tl.sum(b_k * b_kt[None, :] * tl.exp(b_g - b_gk[None, :]), 1)
-                # 转化成f32
+                # Convert to f32
                 o_i_tmp = o_i.to(tl.float32)
                 b_A = tl.where(o_i_tmp > j, b_A, 0.0)
 

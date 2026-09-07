@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -149,8 +149,8 @@ class HybridGmmFunction(torch.autograd.Function):
 
         w_t_list = [w.t() for w in weight_list]
         grad_x_list = torch_npu.npu_grouped_matmul(
-            grad_outputs_contiguous,  # List[Tensor], 每个 [M_i, N]
-            w_t_list,  # List[Tensor], 每个 [N, K] (view)
+            grad_outputs_contiguous,  # List[Tensor], each [M_i, N]
+            w_t_list,  # List[Tensor], each [N, K] (view)
             bias=None,
             group_list=None,
             split_item=0,

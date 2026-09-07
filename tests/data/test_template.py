@@ -44,15 +44,15 @@ TINY_LLAMA4 = os.getenv("TINY_LLAMA4", "llamafactory/tiny-random-Llama-4")
 MESSAGES = [
     {"role": "user", "content": "How are you"},
     {"role": "assistant", "content": "I am fine!"},
-    {"role": "user", "content": "你好"},
-    {"role": "assistant", "content": "很高兴认识你！"},
+    {"role": "user", "content": "Hello"},
+    {"role": "assistant", "content": "Nice to meet you!"},
 ]
 
 MESSAGES_WITH_THOUGHT = [
     {"role": "user", "content": "How are you"},
     {"role": "assistant", "content": "<think>\nModel thought here\n</think>\n\nI am fine!"},
-    {"role": "user", "content": "你好"},
-    {"role": "assistant", "content": "<think>\n模型思考内容\n</think>\n\n很高兴认识你！"},
+    {"role": "user", "content": "Hello"},
+    {"role": "assistant", "content": "<think>\nModel reasoning thought\n</think>\n\nNice to meet you!"},
 ]
 
 
@@ -147,10 +147,10 @@ def test_encode_oneturn():
     prompt_str = (
         "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHow are you<|eot_id|>"
         "<|start_header_id|>assistant<|end_header_id|>\n\nI am fine!<|eot_id|>"
-        "<|start_header_id|>user<|end_header_id|>\n\n你好<|eot_id|>"
+        "<|start_header_id|>user<|end_header_id|>\n\nHello<|eot_id|>"
         "<|start_header_id|>assistant<|end_header_id|>\n\n"
     )
-    answer_str = "很高兴认识你！<|eot_id|>"
+    answer_str = "Nice to meet you!<|eot_id|>"
     _check_tokenization(tokenizer, (prompt_ids, answer_ids), (prompt_str, answer_str))
 
 
@@ -165,9 +165,9 @@ def test_encode_multiturn():
     )
     answer_str_1 = "I am fine!<|eot_id|>"
     prompt_str_2 = (
-        "<|start_header_id|>user<|end_header_id|>\n\n你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+        "<|start_header_id|>user<|end_header_id|>\n\nHello<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
     )
-    answer_str_2 = "很高兴认识你！<|eot_id|>"
+    answer_str_2 = "Nice to meet you!<|eot_id|>"
     _check_tokenization(
         tokenizer,
         (encoded_pairs[0][0], encoded_pairs[0][1], encoded_pairs[1][0], encoded_pairs[1][1]),

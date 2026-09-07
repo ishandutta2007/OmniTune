@@ -2,9 +2,9 @@
 
 
 # Define common settings here
-project = "LlamaFactory"
-copyright = "2024, LlamaFactory Team"
-author = "LlamaFactory Team"
+project = "OmniTune"
+copyright = "2025, OmniTune Team"
+author = "OmniTune Team"
 
 extensions = [
     "sphinx.ext.autodoc",

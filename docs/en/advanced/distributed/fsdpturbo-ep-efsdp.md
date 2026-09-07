@@ -1,6 +1,4 @@
-# FSDPTurbo EP/EFSDP and LlamaFactory FSDP2/CP Design
-
-Chinese version: [FSDPTurbo EP/EFSDP 与 LlamaFactory FSDP2/CP 设计说明](../../../zh/advanced/distributed/fsdpturbo-ep-efsdp.md)
+# FSDPTurbo EP/EFSDP and OmniTune FSDP2/CP Design
 
 This document describes the current implementation of the `fsdpturbo` distributed plugin. Its core principle is a clear separation of responsibilities:
 

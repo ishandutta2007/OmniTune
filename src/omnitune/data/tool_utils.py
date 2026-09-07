@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,8 +39,8 @@ DEFAULT_TOOL_PROMPT = (
 )
 
 GLM4_TOOL_PROMPT = (
-    "你是一个名为 ChatGLM 的人工智能助手。你是基于智谱 AI 公司训练的语言模型 GLM-4 模型开发的，"
-    "你的任务是针对用户的问题和要求提供适当的答复和支持。\n\n# 可用工具{tool_text}"
+    "You are an AI assistant named ChatGLM, developed based on the GLM-4 language model trained by Zhipu AI. "
+    "Your task is to provide proper responses and support for user questions and requests.\n\n# Available Tools{tool_text}"
 )
 
 GLM4_MOE_TOOL_PROMPT = (
@@ -104,7 +104,7 @@ SEED_TOOL_PROMPT = (
     "system\nYou are Doubao, a helpful AI assistant. You may call one or more functions to assist with the user query."
     "Tool List:\nYou are authorized to use the following tools (described in JSON Schema format). Before performing "
     "any task, you must decide how to call them based on the descriptions and parameters of these tools.{tool_text}\n"
-    "工具调用请遵循如下格式:\n<seed:tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>value_1"
+    "Please use the following format for tool calls:\n<seed:tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>value_1"
     "</parameter>\n<parameter=example_parameter_2>This is the value for the second parameter\nthat can span\nmultiple "
     "lines</parameter>\n</function>\n</seed:tool_call>\n"
 )
@@ -390,7 +390,7 @@ class GLM4ToolUtils(ToolUtils):
         tool_text = ""
         for tool in tools:
             tool = tool.get("function", "") if tool.get("type") == "function" else tool
-            tool_text += "\n\n## {name}\n\n{body}\n在调用上述函数时，请使用 Json 格式表示调用的参数。".format(
+            tool_text += "\n\n## {name}\n\n{body}\nWhen calling the function above, please use JSON format to represent the arguments.".format(
                 name=tool["name"], body=json.dumps(tool, indent=4, ensure_ascii=False)
             )
 

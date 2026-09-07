@@ -1,5 +1,5 @@
-LlamaFactory Docs
-=================
+OmniTune Docs
+=============
 
 .. toctree::
    :maxdepth: 1
@@ -7,7 +7,7 @@ LlamaFactory Docs
 
    getting-started
    installation
-   llamaboard-web-ui
+   omnitune-board-web-ui
 
 .. toctree::
    :maxdepth: 1

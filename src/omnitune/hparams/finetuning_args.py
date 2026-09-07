@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -432,11 +432,11 @@ class SwanLabArguments:
     )
     swanlab_lark_webhook_url: str | None = field(
         default=None,
-        metadata={"help": "The Lark(飞书) webhook URL for SwanLab."},
+        metadata={"help": "The Lark (Feishu) webhook URL for SwanLab."},
     )
     swanlab_lark_secret: str | None = field(
         default=None,
-        metadata={"help": "The Lark(飞书) secret for SwanLab."},
+        metadata={"help": "The Lark (Feishu) secret for SwanLab."},
     )
 
 

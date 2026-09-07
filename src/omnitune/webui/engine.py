@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -77,7 +77,7 @@ class Engine:
     def change_lang(self, lang: str):
         r"""Update the displayed language of gradio components."""
         return {
-            elem: elem.__class__(**LOCALES[elem_name][lang])
+            elem: elem.__class__(**LOCALES[elem_name].get(lang, LOCALES[elem_name].get("en", {})))
             for elem_name, elem in self.manager.get_elem_iter()
             if elem_name in LOCALES
         }
