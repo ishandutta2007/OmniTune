@@ -136,10 +136,25 @@ def launch():
         merge_and_export_model()
 
     elif command == "env":
-        raise NotImplementedError("Environment information is not implemented yet.")
+        from omnitune.extras.env import print_env
+
+        print_env()
 
     elif command == "version":
-        raise NotImplementedError("Version information is not implemented yet.")
+        from omnitune.extras.env import VERSION
+
+        welcome_v1 = (
+            "-" * 58
+            + "\n"
+            + f"| Welcome to OmniTune (v1 engine), version {VERSION}"
+            + " " * (14 - len(VERSION))
+            + "|\n|"
+            + " " * 56
+            + "|\n"
+            + "| Project page: https://github.com/omnitune/omnitune |\n"
+            + "-" * 58
+        )
+        print(welcome_v1)
 
     elif command == "help":
         print(USAGE)
