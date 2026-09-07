@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -156,10 +156,10 @@ class Muon(torch.optim.Optimizer):
     def _v2_diag(self, p) -> None:
         """Print (once, rank0) the param/grad/data types needed to implement the DTensor-aware v2.
 
-        Gate with env var LLAMAFACTORY_MUON_DIAG=1 so it is opt-in.
+        Gate with env var OMNITUNE_MUON_DIAG=1 (or LLAMAFACTORY_MUON_DIAG=1) so it is opt-in.
         """
         self._diag_done = True
-        if os.environ.get("LLAMAFACTORY_MUON_DIAG") != "1":
+        if os.environ.get("OMNITUNE_MUON_DIAG", os.environ.get("LLAMAFACTORY_MUON_DIAG")) != "1":
             return
         if not _is_rank0():
             return
