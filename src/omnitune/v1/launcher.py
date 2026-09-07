@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,8 +23,13 @@ USAGE = (
     + "\n"
     + "| Usage:                                                             |\n"
     + "|   omnitune-cli sft -h: train models                            |\n"
+    + "|   omnitune-cli dpo -h: run DPO preference tuning               |\n"
+    + "|   omnitune-cli rm -h: run reward modeling                      |\n"
+    + "|   omnitune-cli chat -h: launch CLI sampler chat                |\n"
+    + "|   omnitune-cli merge -h: merge LoRA and export model           |\n"
+    + "|   omnitune-cli env: show environment info                      |\n"
     + "|   omnitune-cli version: show version info                      |\n"
-    + "| Hint: You can use `lmf` as a shortcut for `omnitune-cli`.      |\n"
+    + "| Hint: You can use `ot` or `omnitune` as commands.              |\n"
     + "-" * 70
 )
 

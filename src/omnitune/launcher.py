@@ -1,4 +1,4 @@
-﻿# Copyright 2025 the OmniTune team.
+# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,10 +27,10 @@ USAGE = (
     + "|   omnitune-cli export -h: merge LoRA adapters and export model |\n"
     + "|   omnitune-cli train -h: train models                          |\n"
     + "|   omnitune-cli webchat -h: launch a chat interface in Web UI   |\n"
-    + "|   omnitune-cli webui: launch LlamaBoard                        |\n"
+    + "|   omnitune-cli webui: launch OmniTune-Board                    |\n"
     + "|   omnitune-cli env: show environment info                      |\n"
     + "|   omnitune-cli version: show version info                      |\n"
-    + "| Hint: You can use `lmf` as a shortcut for `omnitune-cli`.      |\n"
+    + "| Hint: You can use `ot` or `omnitune` as commands.              |\n"
     + "-" * 70
 )
 
@@ -44,12 +44,12 @@ def launch():
     WELCOME = (
         "-" * 58
         + "\n"
-        + f"| Welcome to LLaMA Factory, version {VERSION}"
-        + " " * (21 - len(VERSION))
+        + f"| Welcome to OmniTune, version {VERSION}"
+        + " " * (26 - len(VERSION))
         + "|\n|"
         + " " * 56
         + "|\n"
-        + "| Project page: https://github.com/hiyouga/OmniTune |\n"
+        + "| Project page: https://github.com/omnitune/omnitune |\n"
         + "-" * 58
     )
 
