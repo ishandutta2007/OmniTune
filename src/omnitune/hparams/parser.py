@@ -1,4 +1,4 @@
-﻿# Copyright 2025 HuggingFace Inc. and the OmniTune team.
+# Copyright 2025 HuggingFace Inc. and the OmniTune team.
 #
 # This code is inspired by the HuggingFace's transformers library.
 # https://github.com/huggingface/transformers/blob/v4.40.0/examples/pytorch/language-modeling/run_clm.py
@@ -210,7 +210,8 @@ def _verify_trackio_args(training_args: "TrainingArguments") -> None:
 
 
 def _set_transformers_logging() -> None:
-    if os.getenv("LLAMAFACTORY_VERBOSITY", "INFO") in ["DEBUG", "INFO"]:
+    verbosity = os.getenv("OMNITUNE_VERBOSITY", os.getenv("LLAMAFACTORY_VERBOSITY", "INFO"))
+    if verbosity in ["DEBUG", "INFO"]:
         transformers.utils.logging.set_verbosity_info()
         transformers.utils.logging.enable_default_handler()
         transformers.utils.logging.enable_explicit_format()
