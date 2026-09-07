@@ -31,16 +31,16 @@ The project uses `uv` as the preferred package manager. Commands automatically u
 
 ## Architecture
 
-LlamaFactory has two parallel architectures controlled by the `USE_V1` environment variable:
+OmniTune has two parallel architectures controlled by the `USE_V1` environment variable:
 
 - **v0 (default):** `api, webui > chat, eval, train > data, model > hparams > extras`
 - **v1 (experimental, `USE_V1=1`):** `trainers > core > accelerator, plugins, config > utils`
 
-Most active development happens in v0. The v1 architecture lives in `src/llamafactory/v1/`.
+Most active development happens in v0. The v1 architecture lives in `src/omnitune/v1/`.
 
 ### Entry Points
 
-CLI entry point is `llamafactory-cli` / `lmf` → `src/llamafactory/cli.py:main()`, which dispatches to `launcher.py` based on `USE_V1`.
+CLI entry points are `omnitune` / `ot` / `omnitune-cli` (backward-compat `llamafactory-cli` / `lmf`) → `src/omnitune/cli.py:main()`, which dispatches to `launcher.py` based on `USE_V1`.
 
 Available subcommands: `train`, `chat`, `api`, `export`, `webchat`, `webui`, `env`, `version`, `help`.
 
@@ -54,11 +54,11 @@ run_exp() [tuner.py]
   → optional: export_model()
 ```
 
-Training is invoked with a YAML config: `llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml`
+Training is invoked with a YAML config: `omnitune train examples/train_lora/llama3_lora_sft.yaml`
 
 ### Configuration System
 
-All training parameters are YAML/JSON config files. Argument parsing in `src/llamafactory/hparams/parser.py` produces four typed dataclasses:
+All training parameters are YAML/JSON config files. Argument parsing in `src/omnitune/hparams/parser.py` produces four typed dataclasses:
 - `ModelArguments` — model/tokenizer selection, quantization
 - `DataArguments` — datasets, templates, preprocessing
 - `FinetuningArguments` — LoRA rank/target, training method (sft/dpo/ppo/rm/pt/kto)
@@ -68,27 +68,27 @@ All training parameters are YAML/JSON config files. Argument parsing in `src/lla
 
 | Module | Purpose |
 |--------|---------|
-| `src/llamafactory/model/loader.py` | Loads model + tokenizer; applies quantization, LoRA, patches |
-| `src/llamafactory/model/patcher.py` | Model-specific compatibility patches |
-| `src/llamafactory/data/template.py` | Prompt templates; `TEMPLATES` dict maps model family → format |
-| `src/llamafactory/data/mm_plugin.py` | Multi-modal (image/video/audio) data handling |
-| `src/llamafactory/data/processor/` | Per-stage data processors (supervised, pairwise, pretrain, etc.) |
-| `src/llamafactory/train/sft/` | SFT trainer; other stages follow same structure |
-| `src/llamafactory/chat/` | Inference engines: `hf_engine`, `vllm_engine`, `sglang_engine`, `kt_engine` |
-| `src/llamafactory/extras/constants.py` | Enums and constants used across the project |
+| `src/omnitune/model/loader.py` | Loads model + tokenizer; applies quantization, LoRA, patches |
+| `src/omnitune/model/patcher.py` | Model-specific compatibility patches |
+| `src/omnitune/data/template.py` | Prompt templates; `TEMPLATES` dict maps model family → format |
+| `src/omnitune/data/mm_plugin.py` | Multi-modal (image/video/audio) data handling |
+| `src/omnitune/data/processor/` | Per-stage data processors (supervised, pairwise, pretrain, etc.) |
+| `src/omnitune/train/sft/` | SFT trainer; other stages follow same structure |
+| `src/omnitune/chat/` | Inference engines: `hf_engine`, `vllm_engine`, `sglang_engine`, `kt_engine` |
+| `src/omnitune/extras/constants.py` | Enums and constants used across the project |
 
 ### Adding Support for a New Model
 
-1. Add a prompt template to `src/llamafactory/data/template.py` in the `TEMPLATES` dict
-2. Add any necessary model patches in `src/llamafactory/model/patcher.py`
-3. Add multi-modal support in `src/llamafactory/data/mm_plugin.py` if needed
+1. Add a prompt template to `src/omnitune/data/template.py` in the `TEMPLATES` dict
+2. Add any necessary model patches in `src/omnitune/model/patcher.py`
+3. Add multi-modal support in `src/omnitune/data/mm_plugin.py` if needed
 
 ### Distributed Training
 
 Multi-GPU automatically uses `torchrun`. Additional backends:
 - **Ray:** Optional Ray cluster support
-- **HyperParallel FSDP2:** `src/llamafactory/train/hyper_parallel/`
-- **Megatron-core:** `src/llamafactory/train/mca/`
+- **HyperParallel FSDP2:** `src/omnitune/train/hyper_parallel/`
+- **Megatron-core:** `src/omnitune/train/mca/`
 
 ### Testing
 
