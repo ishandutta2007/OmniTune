@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
 
 import os
 
-from llamafactory.extras.misc import fix_proxy, is_env_enabled
-from llamafactory.webui.interface import create_ui
+from omnitune.extras.misc import fix_proxy, is_env_enabled
+from omnitune.webui.interface import create_ui
 
 
 def main():

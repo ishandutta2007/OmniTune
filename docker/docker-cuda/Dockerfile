@@ -1,4 +1,4 @@
-# https://hub.docker.com/r/hiyouga/pytorch/tags
+﻿# https://hub.docker.com/r/hiyouga/pytorch/tags
 ARG BASE_IMAGE=hiyouga/pytorch:th2.6.0-cu124-flashattn2.7.4-cxx11abi0-devel
 FROM ${BASE_IMAGE}
 
@@ -31,7 +31,7 @@ RUN pip config set global.index-url "${PIP_INDEX}" && \
 # Copy the application into the image
 COPY . /app
 
-# Install LLaMA Factory
+# Install OmniTune
 RUN pip install --no-cache-dir --no-build-isolation -e . && \
     pip install --no-cache-dir --no-build-isolation -r requirements/metrics.txt -r requirements/deepspeed.txt
 

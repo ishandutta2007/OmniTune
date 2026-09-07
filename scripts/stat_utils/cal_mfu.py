@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import torch
 import torch.distributed as dist
 from transformers import AutoConfig
 
-from llamafactory.train.tuner import run_exp
+from omnitune.train.tuner import run_exp
 
 
 BASE = 2  # gemm (add + mul)

@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@ from peft import PeftModel
 from torch.utils.data import Dataset
 from transformers import DataCollatorForSeq2Seq, Qwen2_5_VLProcessor
 
-from llamafactory.extras.constants import IGNORE_INDEX
-from llamafactory.hparams import get_train_args
-from llamafactory.model import load_model, load_tokenizer
-from llamafactory.train.callbacks import LogCallback
-from llamafactory.train.sft.trainer import CustomSeq2SeqTrainer
+from omnitune.extras.constants import IGNORE_INDEX
+from omnitune.hparams import get_train_args
+from omnitune.model import load_model, load_tokenizer
+from omnitune.train.callbacks import LogCallback
+from omnitune.train.sft.trainer import CustomSeq2SeqTrainer
 
 
 class DummyDataset(Dataset):

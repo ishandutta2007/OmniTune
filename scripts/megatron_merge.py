@@ -1,4 +1,4 @@
-# Copyright 2025 the ROLL team and the LlamaFactory team.
+﻿# Copyright 2025 the ROLL team and the OmniTune team.
 #
 # This code is modified from the ROLL library.
 # https://github.com/alibaba/ROLL/blob/main/mcore_adapter/tools/convert.py

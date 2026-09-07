@@ -3,21 +3,21 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "llamafactory"
+name = "omnitune"
 dynamic = ["version"]
-description = "Unified Efficient Fine-Tuning of 100+ LLMs"
+description = "OmniTune: Unified Efficient Fine-Tuning of 100+ LLMs & VLMs"
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.11.0"
 authors = [
-    { name = "hiyouga", email = "hiyouga@buaa.edu.cn" }
+    { name = "OmniTune Team" }
 ]
 keywords = [
     "AI",
     "LLM",
     "GPT",
-    "ChatGPT",
-    "Llama",
+    "OmniTune",
+    "Fine-Tuning",
     "Transformer",
     "DeepSeek",
     "Pytorch"
@@ -76,18 +76,21 @@ dependencies = [
 ]
 
 [project.scripts]
-llamafactory-cli = "llamafactory.cli:main"
-lmf = "llamafactory.cli:main"
+omnitune = "omnitune.cli:main"
+ot = "omnitune.cli:main"
+omnitune-cli = "omnitune.cli:main"
+llamafactory-cli = "omnitune.cli:main"
+lmf = "omnitune.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/hiyouga/LLaMA-Factory"
-Repository = "https://github.com/hiyouga/LLaMA-Factory"
+Homepage = "https://github.com/omnitune/omnitune"
+Repository = "https://github.com/omnitune/omnitune"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/llamafactory"]
+packages = ["src/omnitune"]
 
 [tool.hatch.version]
-path = "src/llamafactory/extras/env.py"
+path = "src/omnitune/extras/env.py"
 pattern = "VERSION = \"(?P<version>[^\"]+)\""
 
 [tool.ruff]
@@ -126,7 +129,7 @@ select = [
 
 [tool.ruff.lint.isort]
 lines-after-imports = 2
-known-first-party = ["llamafactory"]
+known-first-party = ["omnitune"]
 known-third-party = [
     "accelerate",
     "datasets",

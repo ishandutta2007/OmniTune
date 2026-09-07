@@ -1,10 +1,10 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -x
 
 MODEL_PATH=Qwen/Qwen3-4B-Instruct-2507
 
-llamafactory-cli train \
+omnitune train \
     --model_name_or_path ${MODEL_PATH} \
     --trust_remote_code \
     --stage sft \

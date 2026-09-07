@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,10 +22,10 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import DataCollatorForLanguageModeling
 
-from llamafactory.data import MultiModalDataCollatorForSeq2Seq, get_dataset, get_template_and_fix_tokenizer
-from llamafactory.extras.constants import IGNORE_INDEX
-from llamafactory.hparams import get_train_args
-from llamafactory.model import load_model, load_tokenizer
+from omnitune.data import MultiModalDataCollatorForSeq2Seq, get_dataset, get_template_and_fix_tokenizer
+from omnitune.extras.constants import IGNORE_INDEX
+from omnitune.hparams import get_train_args
+from omnitune.model import load_model, load_tokenizer
 
 
 @dataclass

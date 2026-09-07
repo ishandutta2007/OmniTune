@@ -1,11 +1,11 @@
-services:
-  llamafactory:
+﻿services:
+  omnitune:
     build:
       dockerfile: ./docker/docker-cuda/Dockerfile
       context: ../..
       args:
         PIP_INDEX: https://pypi.org/simple
-    container_name: llamafactory
+    container_name: omnitune
     ports:
       - "7860:7860"
       - "8000:8000"

@@ -1,4 +1,4 @@
-# Copyright 2025 Microsoft Corporation and the LlamaFactory team.
+﻿# Copyright 2025 Microsoft Corporation and the OmniTune team.
 #
 # This code is inspired by the Microsoft's DeepSpeed library.
 # https://www.deepspeed.ai/tutorials/flops-profiler/
@@ -20,7 +20,7 @@ import torch
 from deepspeed.accelerator import get_accelerator  # type: ignore
 from deepspeed.profiling.flops_profiler import get_model_profile  # type: ignore
 
-from llamafactory.chat import ChatModel
+from omnitune.chat import ChatModel
 
 
 def calculate_flops(

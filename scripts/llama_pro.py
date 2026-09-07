@@ -1,4 +1,4 @@
-# Copyright 2025 Tencent Inc. and the LlamaFactory team.
+﻿# Copyright 2025 Tencent Inc. and the OmniTune team.
 #
 # This code is inspired by the Tencent's LLaMA-Pro library.
 # https://github.com/TencentARC/LLaMA-Pro/blob/main/scripts/block_expansion.py

@@ -1,4 +1,4 @@
-# https://hub.docker.com/r/rocm/pytorch/tags
+﻿# https://hub.docker.com/r/rocm/pytorch/tags
 # ROCm 7.2 + PyTorch 2.7.1 (Python 3.12). Keep base image's PyTorch; do not reinstall.
 ARG BASE_IMAGE=rocm/pytorch:rocm7.2_ubuntu24.04_py3.12_pytorch_release_2.7.1
 FROM ${BASE_IMAGE}
@@ -32,7 +32,7 @@ RUN pip config set global.index-url "${PIP_INDEX}" && \
 # Copy the application into the image
 COPY . /app
 
-# Install LLaMA Factory (use base image's PyTorch/ROCm; do not reinstall)
+# Install OmniTune (use base image's PyTorch/ROCm; do not reinstall)
 RUN pip install --no-cache-dir -e . --pre && \
     pip install --no-cache-dir -r requirements/deepspeed.txt -r requirements/liger-kernel.txt -r requirements/bitsandbytes.txt
 

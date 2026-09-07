@@ -1,4 +1,4 @@
-# NVIDIA official image (ubuntu-24.04 + cuda-12.9.1 + python-3.12)
+﻿# NVIDIA official image (ubuntu-24.04 + cuda-12.9.1 + python-3.12)
 # https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel-25-06.html
 FROM nvcr.io/nvidia/pytorch:25.06-py3
 
@@ -50,7 +50,7 @@ RUN apt-get update && apt-get install -y zip
 RUN apt-get install -y openjdk-21-jdk
 ENV JAVA_HOME /usr/lib/jvm/java-21-openjdk-amd64
 
-ARG REPO_URL=https://github.com/hiyouga/LlamaFactory.git
+ARG REPO_URL=https://github.com/hiyouga/OmniTune.git
 ARG BRANCH=main
 WORKDIR /app
 
@@ -58,7 +58,7 @@ WORKDIR /app
 RUN git clone --depth 1 --branch ${BRANCH} ${REPO_URL} /app || \
     git clone --depth 1 ${REPO_URL} /app
 
-# Install LLaMA Factory
+# Install OmniTune
 RUN pip install --no-cache-dir -e . --no-build-isolation && \
     pip install --no-cache-dir -r requirements/metrics.txt --no-build-isolation
 

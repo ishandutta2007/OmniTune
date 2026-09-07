@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,12 +23,12 @@ from eval_bleu_rouge import compute_metrics
 from tqdm import tqdm
 from transformers import Seq2SeqTrainingArguments
 
-from llamafactory.data import get_dataset, get_template_and_fix_tokenizer
-from llamafactory.extras.constants import IGNORE_INDEX
-from llamafactory.extras.misc import get_device_count
-from llamafactory.extras.packages import is_vllm_available
-from llamafactory.hparams import get_infer_args
-from llamafactory.model import load_tokenizer
+from omnitune.data import get_dataset, get_template_and_fix_tokenizer
+from omnitune.extras.constants import IGNORE_INDEX
+from omnitune.extras.misc import get_device_count
+from omnitune.extras.packages import is_vllm_available
+from omnitune.hparams import get_infer_args
+from omnitune.model import load_tokenizer
 
 
 if is_vllm_available():
@@ -233,7 +233,7 @@ def vllm_infer(
     print("*" * 70)
 
     # Write all matrix results when matrix_save_name is not None,
-    # The result matrix is referencing src.llamafactory.train.sft.workflow.run_sft # 127~132
+    # The result matrix is referencing src.omnitune.train.sft.workflow.run_sft # 127~132
     # trainer.save_metrics("predict", predict_results.metrics)
     #
     #   {

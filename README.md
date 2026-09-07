@@ -1,22 +1,22 @@
-![# LlamaFactory](assets/logo.png)
+﻿![# OmniTune](assets/logo.png)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LlamaFactory?style=social)](https://github.com/hiyouga/LlamaFactory/stargazers)
-[![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LlamaFactory)](https://github.com/hiyouga/LlamaFactory/commits/main)
-[![GitHub contributors](https://img.shields.io/github/contributors/hiyouga/LlamaFactory?color=orange)](https://github.com/hiyouga/LlamaFactory/graphs/contributors)
-[![GitHub workflow](https://github.com/hiyouga/LlamaFactory/actions/workflows/tests.yml/badge.svg)](https://github.com/hiyouga/LlamaFactory/actions/workflows/tests.yml)
-[![PyPI](https://img.shields.io/pypi/v/llamafactory)](https://pypi.org/project/llamafactory/)
+[![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/OmniTune?style=social)](https://github.com/hiyouga/OmniTune/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/OmniTune)](https://github.com/hiyouga/OmniTune/commits/main)
+[![GitHub contributors](https://img.shields.io/github/contributors/hiyouga/OmniTune?color=orange)](https://github.com/hiyouga/OmniTune/graphs/contributors)
+[![GitHub workflow](https://github.com/hiyouga/OmniTune/actions/workflows/tests.yml/badge.svg)](https://github.com/hiyouga/OmniTune/actions/workflows/tests.yml)
+[![PyPI](https://img.shields.io/pypi/v/omnitune)](https://pypi.org/project/omnitune/)
 [![Citation](https://img.shields.io/badge/citation-1000+-green)](https://scholar.google.com/scholar?cites=12620864006390196564)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hiyouga/llamafactory)](https://hub.docker.com/r/hiyouga/llamafactory/tags)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hiyouga/omnitune)](https://hub.docker.com/r/hiyouga/omnitune/tags)
 
-[![Twitter](https://img.shields.io/twitter/follow/llamafactory_ai)](https://twitter.com/llamafactory_ai)
+[![Twitter](https://img.shields.io/twitter/follow/omnitune_ai)](https://twitter.com/omnitune_ai)
 [![Discord](assets/thirdparty/discord.svg)](https://discord.gg/rKfvV9r9FK)
-[![WeChat](https://img.shields.io/badge/WeChat-User%20Group-blue?logo=wechat)](https://github.com/hiyouga/llamafactory-community)
-[![Blog](https://img.shields.io/badge/Hugo-Official%20Blog-blue?logo=hugo)](https://blog.llamafactory.net/en/)
+[![WeChat](https://img.shields.io/badge/WeChat-User%20Group-blue?logo=wechat)](https://github.com/hiyouga/omnitune-community)
+[![Blog](https://img.shields.io/badge/Hugo-Official%20Blog-blue?logo=hugo)](https://blog.omnitune.net/en/)
 
 [![Open in Colab](assets/thirdparty/colab.svg)](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
-[![Open in DSW](assets/thirdparty/dsw.svg)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
-[![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
-[![Open in Studios](https://img.shields.io/badge/ModelScope-Open%20in%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
+[![Open in DSW](assets/thirdparty/dsw.svg)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/omnitune)
+[![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/OmniTune-Board)
+[![Open in Studios](https://img.shields.io/badge/ModelScope-Open%20in%20Studios-blue)](https://modelscope.cn/studios/hiyouga/OmniTune-Board)
 [![Open in Novita](https://img.shields.io/badge/Novita-Deploy%20Template-blue)](https://novita.ai/templates-library/105981?sharer=88115474-394e-4bda-968e-b88e123d0c47)
 
 ### Used by [Amazon](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/), [NVIDIA](https://build.nvidia.com/spark/llama-factory), [Aliyun](https://help.aliyun.com/zh/pai/use-cases/fine-tune-a-llama-3-model-with-llama-factory), etc.
@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/9b7033e8-f08a-4c3f-bd33-547896664e6e
 
 </div>
 
-👋 Join our [WeChat](https://github.com/hiyouga/llamafactory-community/blob/main/wechat/main.jpg) and [NPU](https://github.com/hiyouga/llamafactory-community/blob/main/wechat/npu.jpg) user groups.
+👋 Join our [WeChat](https://github.com/hiyouga/omnitune-community/blob/main/wechat/main.jpg) and [NPU](https://github.com/hiyouga/omnitune-community/blob/main/wechat/npu.jpg) user groups.
 
 \[ English | [中文](README_zh.md) \]
 
@@ -63,14 +63,14 @@ Start local training:
 
 Start cloud training:
 - **Colab (free)**: https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing
-- **PAI-DSW (free trial)**: https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory
+- **PAI-DSW (free trial)**: https://gallery.pai-ml.com/#/preview/deepLearning/nlp/omnitune
 - **AMD GPU Cloud (free credits)**: https://github.com/AMD-AIM/AMD_Developers_Notebooks/blob/main/en/AMD_developer_LLaMAFactory_note_en.md
 
 Read technical notes:
-- **Documentation (WIP)**: https://llamafactory.readthedocs.io/en/latest/
-- **Documentation (AMD GPU)**: https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/notebooks/fine_tune/llama_factory_llama3.html
-- **Documentation (ASCEND NPU)**: https://llamafactory.readthedocs.io/en/latest/multibackend/npu/index.html
-- **Official Blog**: https://blog.llamafactory.net/en/
+- **Documentation (WIP)**: https://omnitune.readthedocs.io/en/latest/
+- **Documentation (AMD GPU)**: https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/notebooks/fine_tune/omnitune_llama3.html
+- **Documentation (ASCEND NPU)**: https://omnitune.readthedocs.io/en/latest/multibackend/npu/index.html
+- **Official Blog**: https://blog.omnitune.net/en/
 
 > [!NOTE]
 > Except for the above links, all other websites are unauthorized third-party websites. Please carefully use them.
@@ -95,7 +95,7 @@ Read technical notes:
   - [Download from Modelers Hub](#download-from-modelers-hub)
   - [Use W&B Logger](#use-wb-logger)
   - [Use SwanLab Logger](#use-swanlab-logger)
-- [Projects using LlamaFactory](#projects-using-llamafactory)
+- [Projects using OmniTune](#projects-using-omnitune)
 - [License](#license)
 - [Citation](#citation)
 - [Acknowledgement](#acknowledgement)
@@ -121,35 +121,35 @@ Read technical notes:
 ## Blogs
 
 > [!TIP]
-> Now we have a dedicated blog for LlamaFactory!
+> Now we have a dedicated blog for OmniTune!
 >
-> Website: https://blog.llamafactory.net/en/
+> Website: https://blog.omnitune.net/en/
 
-- 💡 [KTransformers Fine-Tuning × LlamaFactory: Fine-tuning 1000 Billion models with 2 4090-GPU + CPU](https://blog.llamafactory.net/en/posts/ktransformers/) (English)
-- 💡 [Easy Dataset × LlamaFactory: Enabling LLMs to Efficiently Learn Domain Knowledge](https://buaa-act.feishu.cn/wiki/GVzlwYcRFiR8OLkHbL6cQpYin7g) (English)
-- 💡 [DataFlow × LlamaFactory: Producing High-Quality Data for LLM Training with a Data Preparation Pipeline](https://wcny4qa9krto.feishu.cn/wiki/LWkkwTDBfiiRKqkDSvucG6yjnbW) (English) | [中文](https://wcny4qa9krto.feishu.cn/wiki/LlMxweUAJimrmykRD5qcGuswnHd)
-- 💡 [DataFlex × LlamaFactory: A Data-Centric Dynamic Training System Built on LlamaFactory](https://wcny4qa9krto.feishu.cn/wiki/OlREwPQWdi9K6ZkJNHIciLhtnkv) (English) | [中文](https://wcny4qa9krto.feishu.cn/wiki/H2A9wSsbCinzavkT2oyc2C5Vn0e)
-- [A One-Stop Code-Free Model Reinforcement Learning and Deployment Platform based on LlamaFactory and EasyR1](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/) (Chinese)
-- [How Apoidea Group enhances visual information extraction from banking documents with multimodal models using LlamaFactory on Amazon SageMaker HyperPod](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/) (English)
+- 💡 [KTransformers Fine-Tuning × OmniTune: Fine-tuning 1000 Billion models with 2 4090-GPU + CPU](https://blog.omnitune.net/en/posts/ktransformers/) (English)
+- 💡 [Easy Dataset × OmniTune: Enabling LLMs to Efficiently Learn Domain Knowledge](https://buaa-act.feishu.cn/wiki/GVzlwYcRFiR8OLkHbL6cQpYin7g) (English)
+- 💡 [DataFlow × OmniTune: Producing High-Quality Data for LLM Training with a Data Preparation Pipeline](https://wcny4qa9krto.feishu.cn/wiki/LWkkwTDBfiiRKqkDSvucG6yjnbW) (English) | [中文](https://wcny4qa9krto.feishu.cn/wiki/LlMxweUAJimrmykRD5qcGuswnHd)
+- 💡 [DataFlex × OmniTune: A Data-Centric Dynamic Training System Built on OmniTune](https://wcny4qa9krto.feishu.cn/wiki/OlREwPQWdi9K6ZkJNHIciLhtnkv) (English) | [中文](https://wcny4qa9krto.feishu.cn/wiki/H2A9wSsbCinzavkT2oyc2C5Vn0e)
+- [A One-Stop Code-Free Model Reinforcement Learning and Deployment Platform based on OmniTune and EasyR1](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-omnitune-and-easyr1/) (Chinese)
+- [How Apoidea Group enhances visual information extraction from banking documents with multimodal models using OmniTune on Amazon SageMaker HyperPod](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/) (English)
 
 <details><summary>All Blogs</summary>
 
-- [LlamaFactory: Fine-tuning the DeepSeek-R1-Distill-Qwen-7B Model for News Classifier](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory_deepseek_r1_distill_7b) (Chinese)
-- [A One-Stop Code-Free Model Fine-Tuning \& Deployment Platform based on SageMaker and LlamaFactory](https://aws.amazon.com/cn/blogs/china/a-one-stop-code-free-model-fine-tuning-deployment-platform-based-on-sagemaker-and-llama-factory/) (Chinese)
-- [LlamaFactory Multi-Modal Fine-Tuning Practice: Fine-Tuning Qwen2-VL for Personal Tourist Guide](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory_qwen2vl) (Chinese)
-- [LlamaFactory: Fine-tuning Llama3 for Role-Playing](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory) (Chinese)
+- [OmniTune: Fine-tuning the DeepSeek-R1-Distill-Qwen-7B Model for News Classifier](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/omnitune_deepseek_r1_distill_7b) (Chinese)
+- [A One-Stop Code-Free Model Fine-Tuning \& Deployment Platform based on SageMaker and OmniTune](https://aws.amazon.com/cn/blogs/china/a-one-stop-code-free-model-fine-tuning-deployment-platform-based-on-sagemaker-and-llama-factory/) (Chinese)
+- [OmniTune Multi-Modal Fine-Tuning Practice: Fine-Tuning Qwen2-VL for Personal Tourist Guide](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/omnitune_qwen2vl) (Chinese)
+- [OmniTune: Fine-tuning Llama3 for Role-Playing](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/omnitune) (Chinese)
 
 </details>
 
 ## Changelog
 
-[25/10/26] We support Megatron-core training backend with [**mcore_adapter**](https://github.com/alibaba/ROLL/tree/main/mcore_adapter). See [PR #9237](https://github.com/hiyouga/LlamaFactory/pull/9237) to get started.
+[25/10/26] We support Megatron-core training backend with [**mcore_adapter**](https://github.com/alibaba/ROLL/tree/main/mcore_adapter). See [PR #9237](https://github.com/hiyouga/OmniTune/pull/9237) to get started.
 
 [25/08/22] We supported **[OFT](https://arxiv.org/abs/2306.07280)** and **[OFTv2](https://arxiv.org/abs/2506.19847)**. See [examples](examples/README.md) for usage.
 
-[25/08/20] We supported fine-tuning the **[Intern-S1-mini](https://huggingface.co/internlm/Intern-S1-mini)** models. See [PR #8976](https://github.com/hiyouga/LlamaFactory/pull/8976) to get started.
+[25/08/20] We supported fine-tuning the **[Intern-S1-mini](https://huggingface.co/internlm/Intern-S1-mini)** models. See [PR #8976](https://github.com/hiyouga/OmniTune/pull/8976) to get started.
 
-[25/08/06] We supported fine-tuning the **[GPT-OSS](https://github.com/openai/gpt-oss)** models. See [PR #8826](https://github.com/hiyouga/LlamaFactory/pull/8826) to get started.
+[25/08/06] We supported fine-tuning the **[GPT-OSS](https://github.com/openai/gpt-oss)** models. See [PR #8826](https://github.com/hiyouga/OmniTune/pull/8826) to get started.
 
 <details><summary>Full Changelog</summary>
 
@@ -159,13 +159,13 @@ Read technical notes:
 
 [25/04/21] We supported the **[Muon](https://github.com/KellerJordan/Muon)** optimizer. See [examples](examples/README.md) for usage. Thank [@tianshijing](https://github.com/tianshijing)'s PR.
 
-[25/04/16] We supported fine-tuning the **[InternVL3](https://huggingface.co/OpenGVLab/InternVL3-8B)** model. See [PR #7258](https://github.com/hiyouga/LlamaFactory/pull/7258) to get started.
+[25/04/16] We supported fine-tuning the **[InternVL3](https://huggingface.co/OpenGVLab/InternVL3-8B)** model. See [PR #7258](https://github.com/hiyouga/OmniTune/pull/7258) to get started.
 
 [25/04/14] We supported fine-tuning the **[GLM-Z1](https://huggingface.co/THUDM/GLM-Z1-9B-0414)** and **[Kimi-VL](https://huggingface.co/moonshotai/Kimi-VL-A3B-Instruct)** models.
 
-[25/04/06] We supported fine-tuning the **[Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)** model. See [PR #7611](https://github.com/hiyouga/LlamaFactory/pull/7611) to get started.
+[25/04/06] We supported fine-tuning the **[Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)** model. See [PR #7611](https://github.com/hiyouga/OmniTune/pull/7611) to get started.
 
-[25/03/31] We supported fine-tuning the **[Qwen2.5 Omni](https://qwenlm.github.io/blog/qwen2.5-omni/)** model. See [PR #7537](https://github.com/hiyouga/LlamaFactory/pull/7537) to get started.
+[25/03/31] We supported fine-tuning the **[Qwen2.5 Omni](https://qwenlm.github.io/blog/qwen2.5-omni/)** model. See [PR #7537](https://github.com/hiyouga/OmniTune/pull/7537) to get started.
 
 [25/03/15] We supported **[SGLang](https://github.com/sgl-project/sglang)** as inference backend. Try `infer_backend: sglang` to accelerate inference.
 
@@ -217,17 +217,17 @@ Read technical notes:
 
 [24/04/26] We supported fine-tuning the **LLaVA-1.5** multimodal LLMs. See [examples](examples/README.md) for usage.
 
-[24/04/22] We provided a **[Colab notebook](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)** for fine-tuning the Llama-3 model on a free T4 GPU. Two Llama-3-derived models fine-tuned using LlamaFactory are available at Hugging Face, check [Llama3-8B-Chinese-Chat](https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat) and [Llama3-Chinese](https://huggingface.co/zhichen/Llama3-Chinese) for details.
+[24/04/22] We provided a **[Colab notebook](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)** for fine-tuning the Llama-3 model on a free T4 GPU. Two Llama-3-derived models fine-tuned using OmniTune are available at Hugging Face, check [Llama3-8B-Chinese-Chat](https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat) and [Llama3-Chinese](https://huggingface.co/zhichen/Llama3-Chinese) for details.
 
 [24/04/21] We supported **[Mixture-of-Depths](https://arxiv.org/abs/2404.02258)** according to [AstraMindAI's implementation](https://github.com/astramind-ai/Mixture-of-depths). See [examples](examples/README.md) for usage.
 
 [24/04/16] We supported **[BAdam](https://arxiv.org/abs/2404.02827)** optimizer. See [examples](examples/README.md) for usage.
 
-[24/04/16] We supported **[unsloth](https://github.com/unslothai/unsloth)**'s long-sequence training (Llama-2-7B-56k within 24GB). It achieves **117%** speed and **50%** memory compared with FlashAttention-2, more benchmarks can be found in [this page](https://github.com/hiyouga/LlamaFactory/wiki/Performance-comparison).
+[24/04/16] We supported **[unsloth](https://github.com/unslothai/unsloth)**'s long-sequence training (Llama-2-7B-56k within 24GB). It achieves **117%** speed and **50%** memory compared with FlashAttention-2, more benchmarks can be found in [this page](https://github.com/hiyouga/OmniTune/wiki/Performance-comparison).
 
 [24/03/31] We supported **[ORPO](https://arxiv.org/abs/2403.07691)**. See [examples](examples/README.md) for usage.
 
-[24/03/21] Our paper "[LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models](https://arxiv.org/abs/2403.13372)" is available at arXiv!
+[24/03/21] Our paper "[OmniTune: Unified Efficient Fine-Tuning of 100+ Language Models](https://arxiv.org/abs/2403.13372)" is available at arXiv!
 
 [24/03/20] We supported **FSDP+QLoRA** that fine-tunes a 70B model on 2x24GB GPUs. See [examples](examples/README.md) for usage.
 
@@ -241,11 +241,11 @@ Read technical notes:
 
 [24/02/15] We supported **block expansion** proposed by [LLaMA Pro](https://github.com/TencentARC/LLaMA-Pro). See [examples](examples/README.md) for usage.
 
-[24/02/05] Qwen1.5 (Qwen2 beta version) series models are supported in LlamaFactory. Check this [blog post](https://qwenlm.github.io/blog/qwen1.5/) for details.
+[24/02/05] Qwen1.5 (Qwen2 beta version) series models are supported in OmniTune. Check this [blog post](https://qwenlm.github.io/blog/qwen1.5/) for details.
 
 [24/01/18] We supported **agent tuning** for most models, equipping model with tool using abilities by fine-tuning with `dataset: glaive_toolcall_en`.
 
-[23/12/23] We supported **[unsloth](https://github.com/unslothai/unsloth)**'s implementation to boost LoRA tuning for the LLaMA, Mistral and Yi models. Try `use_unsloth: true` argument to activate unsloth patch. It achieves **170%** speed in our benchmark, check [this page](https://github.com/hiyouga/LlamaFactory/wiki/Performance-comparison) for details.
+[23/12/23] We supported **[unsloth](https://github.com/unslothai/unsloth)**'s implementation to boost LoRA tuning for the LLaMA, Mistral and Yi models. Try `use_unsloth: true` argument to activate unsloth patch. It achieves **170%** speed in our benchmark, check [this page](https://github.com/hiyouga/OmniTune/wiki/Performance-comparison) for details.
 
 [23/12/12] We supported fine-tuning the latest MoE model **[Mixtral 8x7B](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)** in our framework. See hardware requirement [here](#hardware-requirement).
 
@@ -280,7 +280,7 @@ Read technical notes:
 </details>
 
 > [!TIP]
-> If you cannot use the latest feature, please pull the latest code and install LlamaFactory again.
+> If you cannot use the latest feature, please pull the latest code and install OmniTune again.
 
 ## Supported Models
 
@@ -351,9 +351,9 @@ Read technical notes:
 >
 > \*\*: You need to install a specific version of `transformers` to use the corresponding model.
 
-Please refer to [constants.py](src/llamafactory/extras/constants.py) for a full list of models we supported.
+Please refer to [constants.py](src/omnitune/extras/constants.py) for a full list of models we supported.
 
-You also can add a custom chat template to [template.py](src/llamafactory/data/template.py).
+You also can add a custom chat template to [template.py](src/omnitune/data/template.py).
 
 ## Supported Training Approaches
 
@@ -523,8 +523,8 @@ huggingface-cli login
 #### Install from Source
 
 ```bash
-git clone --depth 1 https://github.com/hiyouga/LlamaFactory.git
-cd LlamaFactory
+git clone --depth 1 https://github.com/hiyouga/OmniTune.git
+cd OmniTune
 pip install -e .
 pip install -r requirements/metrics.txt
 ```
@@ -536,12 +536,12 @@ Additional dependencies for specific features are available in `examples/require
 #### Install from Docker Image
 
 ```bash
-docker run -it --rm --gpus=all --ipc=host hiyouga/llamafactory:latest
+docker run -it --rm --gpus=all --ipc=host hiyouga/omnitune:latest
 ```
 
 This image is built on Ubuntu 22.04 (x86\_64), CUDA 12.4, Python 3.11, PyTorch 2.6.0, and Flash-attn 2.7.4.
 
-Find the pre-built images: https://hub.docker.com/r/hiyouga/llamafactory/tags
+Find the pre-built images: https://hub.docker.com/r/hiyouga/omnitune/tags
 
 Please refer to [build docker](#build-docker) to build the image yourself.
 
@@ -550,7 +550,7 @@ Please refer to [build docker](#build-docker) to build the image yourself.
 Create an isolated Python environment with [uv](https://github.com/astral-sh/uv):
 
 ```bash
-uv run llamafactory-cli webui
+uv run omnitune webui
 ```
 
 </details>
@@ -604,23 +604,23 @@ To enable FlashAttention-2 on the Windows platform, please use the script from [
 
 <details><summary>For Ascend NPU users</summary>
 
-To install LlamaFactory on Ascend NPU devices, please use Python 3.12 and install the extra dependencies with `pip install -r requirements/npu.txt`. Additionally, you need to install the **Ascend CANN Toolkit and Kernels**. Please follow the [installation tutorial](https://llamafactory.readthedocs.io/en/latest/multibackend/npu/npu_installation.html).
+To install OmniTune on Ascend NPU devices, please use Python 3.12 and install the extra dependencies with `pip install -r requirements/npu.txt`. Additionally, you need to install the **Ascend CANN Toolkit and Kernels**. Please follow the [installation tutorial](https://omnitune.readthedocs.io/en/latest/multibackend/npu/npu_installation.html).
 
 
 You can also download the pre-built Docker images:
 
 ```bash
 # Docker Hub
-docker pull hiyouga/llamafactory:latest-910b-ubuntu
-docker pull hiyouga/llamafactory:latest-a3-ubuntu
-docker pull hiyouga/llamafactory:latest-910b-openeuler
-docker pull hiyouga/llamafactory:latest-a3-openeuler
+docker pull hiyouga/omnitune:latest-910b-ubuntu
+docker pull hiyouga/omnitune:latest-a3-ubuntu
+docker pull hiyouga/omnitune:latest-910b-openeuler
+docker pull hiyouga/omnitune:latest-a3-openeuler
 
 # quay.io
-docker pull quay.io/ascend/llamafactory:latest-910b-ubuntu
-docker pull quay.io/ascend/llamafactory:latest-a3-ubuntu
-docker pull quay.io/ascend/llamafactory:latest-910b-openeuler
-docker pull quay.io/ascend/llamafactory:latest-a3-openeuler
+docker pull quay.io/ascend/omnitune:latest-910b-ubuntu
+docker pull quay.io/ascend/omnitune:latest-a3-ubuntu
+docker pull quay.io/ascend/omnitune:latest-910b-openeuler
+docker pull quay.io/ascend/omnitune:latest-a3-openeuler
 ```
 
 #### Install BitsAndBytes
@@ -673,22 +673,22 @@ You can also use **[Easy Dataset](https://github.com/ConardLi/easy-dataset)**, *
 Use the following 3 commands to run LoRA **fine-tuning**, **inference** and **merging** of the Qwen3-4B-Instruct model, respectively.
 
 ```bash
-llamafactory-cli train examples/train_lora/qwen3_lora_sft.yaml
-llamafactory-cli chat examples/inference/qwen3_lora_sft.yaml
-llamafactory-cli export examples/merge_lora/qwen3_lora_sft.yaml
+omnitune train examples/train_lora/qwen3_lora_sft.yaml
+omnitune chat examples/inference/qwen3_lora_sft.yaml
+omnitune export examples/merge_lora/qwen3_lora_sft.yaml
 ```
 
 See [examples/README.md](examples/README.md) for advanced usage (including distributed training).
 
 > [!TIP]
-> Use `llamafactory-cli help` to show help information.
+> Use `omnitune help` to show help information.
 >
-> Read [FAQs](https://github.com/hiyouga/LlamaFactory/issues/4614) first if you encounter any problems.
+> Read [FAQs](https://github.com/hiyouga/OmniTune/issues/4614) first if you encounter any problems.
 
 ### Fine-Tuning with LLaMA Board GUI (powered by [Gradio](https://github.com/gradio-app/gradio))
 
 ```bash
-llamafactory-cli webui
+omnitune webui
 ```
 
 ### Build Docker
@@ -698,7 +698,7 @@ For CUDA users:
 ```bash
 cd docker/docker-cuda/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec omnitune bash
 ```
 
 For Ascend NPU users:
@@ -708,19 +708,19 @@ cd docker/docker-npu/
 
 # A2 with Ubuntu
 docker compose --profile a2-ubuntu up -d
-docker compose --profile a2-ubuntu exec llamafactory-a2-ubuntu bash
+docker compose --profile a2-ubuntu exec omnitune-a2-ubuntu bash
 
 # A3 with Ubuntu
 docker compose --profile a3-ubuntu up -d
-docker compose --profile a3-ubuntu exec llamafactory-a3-ubuntu bash
+docker compose --profile a3-ubuntu exec omnitune-a3-ubuntu bash
 
 # A2 with openEuler
 docker compose --profile a2-openeuler up -d
-docker compose --profile a2-openeuler exec llamafactory-a2-openeuler bash
+docker compose --profile a2-openeuler exec omnitune-a2-openeuler bash
 
 # A3 with openEuler
 docker compose --profile a3-openeuler up -d
-docker compose --profile a3-openeuler exec llamafactory-a3-openeuler bash
+docker compose --profile a3-openeuler exec omnitune-a3-openeuler bash
 ```
 
 For AMD ROCm users:
@@ -728,7 +728,7 @@ For AMD ROCm users:
 ```bash
 cd docker/docker-rocm/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec omnitune bash
 ```
 
 <details><summary>Build without Docker Compose</summary>
@@ -738,15 +738,15 @@ For CUDA users:
 ```bash
 docker build -f ./docker/docker-cuda/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
-    -t llamafactory:latest .
+    -t omnitune:latest .
 
 docker run -dit --ipc=host --gpus=all \
     -p 7860:7860 \
     -p 8000:8000 \
-    --name llamafactory \
-    llamafactory:latest
+    --name omnitune \
+    omnitune:latest
 
-docker exec -it llamafactory bash
+docker exec -it omnitune bash
 ```
 
 For Ascend NPU users:
@@ -754,7 +754,7 @@ For Ascend NPU users:
 ```bash
 docker build -f ./docker/docker-npu/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
-    -t llamafactory:latest .
+    -t omnitune:latest .
 
 docker run -dit --ipc=host \
     -v /usr/local/dcmi:/usr/local/dcmi \
@@ -767,10 +767,10 @@ docker run -dit --ipc=host \
     --device /dev/davinci_manager \
     --device /dev/devmm_svm \
     --device /dev/hisi_hdc \
-    --name llamafactory \
-    llamafactory:latest
+    --name omnitune \
+    omnitune:latest
 
-docker exec -it llamafactory bash
+docker exec -it omnitune bash
 ```
 
 For AMD ROCm users:
@@ -778,17 +778,17 @@ For AMD ROCm users:
 ```bash
 docker build -f ./docker/docker-rocm/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
-    -t llamafactory:latest .
+    -t omnitune:latest .
 
 docker run -dit --ipc=host \
     -p 7860:7860 \
     -p 8000:8000 \
     --device /dev/kfd \
     --device /dev/dri \
-    --name llamafactory \
-    llamafactory:latest
+    --name omnitune \
+    omnitune:latest
 
-docker exec -it llamafactory bash
+docker exec -it omnitune bash
 ```
 
 </details>
@@ -808,7 +808,7 @@ When building the Docker image, use `-v ./hf_cache:/root/.cache/huggingface` arg
 ### Deploy with OpenAI-style API and vLLM
 
 ```bash
-API_PORT=8000 llamafactory-cli api examples/inference/qwen3.yaml infer_backend=vllm vllm_enforce_eager=true
+API_PORT=8000 omnitune api examples/inference/qwen3.yaml infer_backend=vllm vllm_enforce_eager=true
 ```
 
 > [!TIP]
@@ -862,7 +862,7 @@ When launching training tasks, you can log in to SwanLab in three ways:
 2. Set the environment variable `SWANLAB_API_KEY` to your [API key](https://swanlab.cn/settings).
 3. Use the `swanlab login` command to complete the login.
 
-## Projects using LlamaFactory
+## Projects using OmniTune
 
 If you have a project that should be incorporated, please contact via email or create a pull request.
 
@@ -960,9 +960,9 @@ If you have a project that should be incorporated, please contact via email or c
 1. **[Chinese-LLaVA-Med](https://github.com/BUAADreamer/Chinese-LLaVA-Med)**: A multimodal large language model specialized in Chinese medical domain, based on LLaVA-1.5-7B.
 1. **[AutoRE](https://github.com/THUDM/AutoRE)**: A document-level relation extraction system based on large language models.
 1. **[NVIDIA RTX AI Toolkit](https://github.com/NVIDIA/RTX-AI-Toolkit)**: SDKs for fine-tuning LLMs on Windows PC for NVIDIA RTX.
-1. **[LazyLLM](https://github.com/LazyAGI/LazyLLM)**: An easy and lazy way for building multi-agent LLMs applications and supports model fine-tuning via LlamaFactory.
+1. **[LazyLLM](https://github.com/LazyAGI/LazyLLM)**: An easy and lazy way for building multi-agent LLMs applications and supports model fine-tuning via OmniTune.
 1. **[RAG-Retrieval](https://github.com/NLPJCL/RAG-Retrieval)**: A full pipeline for RAG retrieval model fine-tuning, inference, and distillation. [[blog]](https://zhuanlan.zhihu.com/p/987727357)
-1. **[360-LLaMA-Factory](https://github.com/Qihoo360/360-LLaMA-Factory)**: A modified library that supports long sequence SFT & DPO using ring attention.
+1. **[360-OmniTune](https://github.com/Qihoo360/360-OmniTune)**: A modified library that supports long sequence SFT & DPO using ring attention.
 1. **[Sky-T1](https://novasky-ai.github.io/posts/sky-t1/)**: An o1-like model fine-tuned by NovaSky AI with very small cost.
 1. **[WeClone](https://github.com/xming521/WeClone)**: One-stop solution for creating your digital avatar from chat logs.
 1. **[EmoLLM](https://github.com/SmartFlowAI/EmoLLM)**: A project about large language models (LLMs) and mental health.
@@ -979,8 +979,8 @@ Please follow the model licenses to use the corresponding model weights: [BLOOM]
 If this work is helpful, please kindly cite as:
 
 ```bibtex
-@inproceedings{zheng2024llamafactory,
-  title={LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models},
+@inproceedings{zheng2024omnitune,
+  title={OmniTune: Unified Efficient Fine-Tuning of 100+ Language Models},
   author={Yaowei Zheng and Richong Zhang and Junhao Zhang and Yanhan Ye and Zheyan Luo and Zhangchi Feng and Yongqiang Ma},
   booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)},
   address={Bangkok, Thailand},

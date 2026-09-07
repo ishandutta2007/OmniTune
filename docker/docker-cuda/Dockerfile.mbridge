@@ -1,4 +1,4 @@
-# LLaMA-Factory + Megatron Bridge (CUDA) runtime
+﻿# OmniTune + Megatron Bridge (CUDA) runtime
 # Mirrors the verified host env: Python 3.12, PyTorch 2.12.1+cu126,
 # TransformerEngine 2.17, megatron-core 0.18, megatron-bridge 0.5.
 #
@@ -52,7 +52,7 @@ RUN if [ -f /etc/apt/sources.list.d/ubuntu.sources ]; then \
 
 COPY . /app
 
-# PyTorch + TE + Megatron Bridge + LLaMA-Factory in one layer
+# PyTorch + TE + Megatron Bridge + OmniTune in one layer
 RUN pip install --no-cache-dir \
         torch==2.12.1 torchvision==0.27.1 torchaudio==2.11.0 \
         --index-url ${TORCH_INDEX} && \
@@ -75,7 +75,7 @@ import torch
 import megatron.core
 import transformer_engine
 from megatron.bridge import AutoBridge  # noqa: F401
-import llamafactory
+import omnitune
 print("torch", torch.__version__, "cuda", torch.version.cuda)
 print("te", transformer_engine.__version__)
 print("megatron-bridge import ok")

@@ -1,6 +1,6 @@
-# Docker Setup for NVIDIA GPUs
+﻿# Docker Setup for NVIDIA GPUs
 
-This directory contains Docker configuration files for running LLaMA Factory with NVIDIA GPU support.
+This directory contains Docker configuration files for running OmniTune with NVIDIA GPU support.
 
 ## Prerequisites
 
@@ -61,7 +61,7 @@ If successful, you should see your GPU information displayed.
 ```bash
 cd docker/docker-cuda/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec omnitune bash
 ```
 
 ### Using Docker Run
@@ -71,17 +71,17 @@ docker compose exec llamafactory bash
 docker build -f ./docker/docker-cuda/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=metrics \
-    -t llamafactory:latest .
+    -t omnitune:latest .
 
 # Run the container
 docker run -dit --ipc=host --gpus=all \
     -p 7860:7860 \
     -p 8000:8000 \
-    --name llamafactory \
-    llamafactory:latest
+    --name omnitune \
+    omnitune:latest
 
 # Enter the container
-docker exec -it llamafactory bash
+docker exec -it omnitune bash
 ```
 
 ## Troubleshooting
@@ -106,7 +106,7 @@ sudo usermod -aG docker $USER
 
 ## Megatron Bridge Image
 
-`Dockerfile.megatron` builds a CUDA runtime for LLaMA-Factory + [Megatron Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/):
+`Dockerfile.megatron` builds a CUDA runtime for OmniTune + [Megatron Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/):
 
 | Component | Version |
 | --- | --- |
@@ -122,7 +122,7 @@ From repo root:
 
 ```bash
 docker build -f docker/docker-cuda/Dockerfile.megatron \
-  -t llamafactory-megatron-bridge:latest .
+  -t omnitune-megatron-bridge:latest .
 ```
 
 ### Run training
@@ -132,7 +132,7 @@ docker run --rm -it --gpus all --ipc=host --shm-size=16g \
   -e DISABLE_VERSION_CHECK=1 \
   -e USE_MEGATRON_BRIDGE=1 \
   -v "$PWD":/app -w /app \
-  llamafactory-megatron-bridge:latest
+  omnitune-megatron-bridge:latest
 ```
 
 ## Additional Notes

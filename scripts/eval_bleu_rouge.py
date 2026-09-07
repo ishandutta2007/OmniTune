@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ try:
     jieba.setLogLevel(logging.CRITICAL)
     jieba.initialize()
 except ImportError:
-    print("Please install llamafactory with `pip install -r requirements/metrics.txt`.")
+    print("Please install omnitune with `pip install -r requirements/metrics.txt`.")
     raise
 
 

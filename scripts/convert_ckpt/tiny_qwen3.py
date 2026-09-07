@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,5 +28,5 @@ if __name__ == "__main__":
     model = Qwen3ForCausalLM.from_config(config)
     model.save_pretrained("tiny-qwen3")
     tokenizer.save_pretrained("tiny-qwen3")
-    model.push_to_hub("llamafactory/tiny-random-qwen3")
-    tokenizer.push_to_hub("llamafactory/tiny-random-qwen3")
+    model.push_to_hub("omnitune/tiny-random-qwen3")
+    tokenizer.push_to_hub("omnitune/tiny-random-qwen3")

@@ -1,14 +1,14 @@
-# 面向昇腾 NPU 的 LlamaFactory 镜像
+﻿# 面向昇腾 NPU 的 OmniTune 镜像
 
-LlamaFactory 昇腾 NPU 镜像面向华为昇腾 Atlas NPU，提供可直接使用的 LlamaFactory 环境。镜像基于昇腾 CANN 容器镜像构建，预装 Python、PyTorch、TorchNPU、DeepSpeed、LlamaFactory 等组件。
+OmniTune 昇腾 NPU 镜像面向华为昇腾 Atlas NPU，提供可直接使用的 OmniTune 环境。镜像基于昇腾 CANN 容器镜像构建，预装 Python、PyTorch、TorchNPU、DeepSpeed、OmniTune 等组件。
 
-安装方法和问题排查请参考 [LlamaFactory NPU 安装及配置文档](https://llamafactory.readthedocs.io/zh-cn/latest/multibackend/npu/npu_installation.html)。
+安装方法和问题排查请参考 [OmniTune NPU 安装及配置文档](https://omnitune.readthedocs.io/zh-cn/latest/multibackend/npu/npu_installation.html)。
 
 ## 快速参考
 
 - 镜像仓库：
-  - `docker.io/hiyouga/llamafactory`
-  - `quay.io/ascend/llamafactory`
+  - `docker.io/hiyouga/omnitune`
+  - `quay.io/ascend/omnitune`
 - Dockerfile：`docker/docker-npu/Dockerfile`
 - Docker Compose 文件：`docker/docker-npu/docker-compose.yml`
 
@@ -37,7 +37,7 @@ LlamaFactory 昇腾 NPU 镜像面向华为昇腾 Atlas NPU，提供可直接使�
 | Transformers | 构建时的最新兼容版本 |
 | Triton Ascend | `3.2.1` |
 | DeepSpeed | 构建时的最新兼容版本 |
-| LlamaFactory | 从构建上下文中的仓库源码安装 |
+| OmniTune | 从构建上下文中的仓库源码安装 |
 
 镜像不包含模型权重和数据集。请通过目录挂载或运行时下载的方式单独提供，并遵守对应的许可证和使用要求。
 
@@ -59,12 +59,12 @@ latest-<芯片信息>-<操作系统>
 后续发布的 NPU release 镜像将使用以下完整 tag 格式。历史 release 镜像使用旧的命名格式，不适用以下规则。
 
 ```text
-<LlamaFactory版本>-cann<CANN版本>-torch_npu<TorchNPU版本>-<芯片信息>-<操作系统>-<Python版本>
+<OmniTune版本>-cann<CANN版本>-torch_npu<TorchNPU版本>-<芯片信息>-<操作系统>-<Python版本>
 ```
 
 | 字段 | 示例 | 说明 |
 | --- | --- | --- |
-| `LlamaFactory版本` | `0.9.5` | LlamaFactory release 版本号 |
+| `OmniTune版本` | `0.9.5` | OmniTune release 版本号 |
 | `CANN版本` | `9.1.0` | 从 CANN 基础镜像 tag 中提取 |
 | `TorchNPU版本` | `2.10.0.post2` | 镜像使用的 TorchNPU 完整版本，包含 `.postN` 等后缀 |
 | `芯片信息` | `910b` 或 `a3` | 镜像所适配的昇腾芯片型号 |
@@ -94,8 +94,8 @@ latest-<芯片信息>-<操作系统>
 以下示例使用一张 NPU 启动最新的 A2 Ubuntu 镜像。请根据实际情况修改 ``DOCKER_IMAGE`` 和 ``device``。
 
 ```bash
-CONTAINER_NAME=llamafactory-npu
-DOCKER_IMAGE=hiyouga/llamafactory:latest-910b-ubuntu
+CONTAINER_NAME=omnitune-npu
+DOCKER_IMAGE=hiyouga/omnitune:latest-910b-ubuntu
 
 docker run --rm -it \
   --net=host \
@@ -121,7 +121,7 @@ docker run --rm -it \
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 npu-smi info
 python -c "import torch, torch_npu; print(torch.__version__, torch_npu.__version__, torch.npu.is_available())"
-llamafactory-cli help
+omnitune help
 ```
 
 ### 本地构建镜像
@@ -133,7 +133,7 @@ docker build \
   -f ./docker/docker-npu/Dockerfile \
   --build-arg BASE_IMAGE=quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12 \
   --build-arg PIP_INDEX=https://pypi.org/simple \
-  -t llamafactory:npu-910b-ubuntu \
+  -t omnitune:npu-910b-ubuntu \
   .
 ```
 
@@ -178,8 +178,8 @@ docker compose --profile a3-openeuler up -d
 
 ## 许可证与免责声明
 
-LlamaFactory 基于 [Apache License 2.0](../../LICENSE) 发布。
+OmniTune 基于 [Apache License 2.0](../../LICENSE) 发布。
 
-昇腾 CANN、TorchNPU、Triton Ascend、DeepSpeed、基础操作系统软件包、模型权重、数据集和其他第三方组件分别受其自身许可证与条款约束。LlamaFactory 的许可证不会替代或覆盖这些条款。
+昇腾 CANN、TorchNPU、Triton Ascend、DeepSpeed、基础操作系统软件包、模型权重、数据集和其他第三方组件分别受其自身许可证与条款约束。OmniTune 的许可证不会替代或覆盖这些条款。
 
 本镜像按“原样”提供，不附带任何明示或暗示的保证。用户需要自行验证软硬件兼容性、保障容器及运行配置的安全、遵守适用的许可证和法律，并在训练、评测或部署前审查模型与数据集的使用条款。

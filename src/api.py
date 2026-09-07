@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+﻿# Copyright 2025 the OmniTune team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,8 +16,8 @@ import os
 
 import uvicorn
 
-from llamafactory.api.app import create_app
-from llamafactory.chat import ChatModel
+from omnitune.api.app import create_app
+from omnitune.chat import ChatModel
 
 
 def main():

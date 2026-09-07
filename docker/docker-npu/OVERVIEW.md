@@ -1,14 +1,14 @@
-# LlamaFactory Image for Ascend NPU
+﻿# OmniTune Image for Ascend NPU
 
-LlamaFactory Ascend NPU images are designed for Huawei Ascend Atlas NPUs and provide a ready-to-use LlamaFactory environment. Built on Ascend CANN container images, they include Python, PyTorch, TorchNPU, DeepSpeed, LlamaFactory, and other components.
+OmniTune Ascend NPU images are designed for Huawei Ascend Atlas NPUs and provide a ready-to-use OmniTune environment. Built on Ascend CANN container images, they include Python, PyTorch, TorchNPU, DeepSpeed, OmniTune, and other components.
 
-For installation and troubleshooting details, see the [English NPU installation guide](https://llamafactory.readthedocs.io/en/latest/multibackend/npu/npu_installation.html).
+For installation and troubleshooting details, see the [English NPU installation guide](https://omnitune.readthedocs.io/en/latest/multibackend/npu/npu_installation.html).
 
 ## Quick Reference
 
 - Image registries:
-  - `docker.io/hiyouga/llamafactory`
-  - `quay.io/ascend/llamafactory`
+  - `docker.io/hiyouga/omnitune`
+  - `quay.io/ascend/omnitune`
 - Dockerfile: `docker/docker-npu/Dockerfile`
 - Docker Compose file: `docker/docker-npu/docker-compose.yml`
 
@@ -37,7 +37,7 @@ The image includes the following core components:
 | Transformers | Latest compatible version at build time |
 | Triton Ascend | `3.2.1` |
 | DeepSpeed | Latest compatible version at build time |
-| LlamaFactory | Installed from the repository build context |
+| OmniTune | Installed from the repository build context |
 
 The image does not include model weights or datasets. Mount or download them separately and comply with their respective licenses and acceptable-use requirements.
 
@@ -59,12 +59,12 @@ latest-<chip>-<os>
 Future NPU release images will use the full tag format below. Historical release images used earlier naming formats and do not follow this rule.
 
 ```text
-<LlamaFactory-version>-cann<CANN-version>-torch_npu<TorchNPU-version>-<chip>-<os>-<Python-version>
+<OmniTune-version>-cann<CANN-version>-torch_npu<TorchNPU-version>-<chip>-<os>-<Python-version>
 ```
 
 | Field | Example | Description |
 | --- | --- | --- |
-| `LlamaFactory-version` | `0.9.5` | LlamaFactory release version |
+| `OmniTune-version` | `0.9.5` | OmniTune release version |
 | `CANN-version` | `9.1.0` | Parsed from the CANN base image tag |
 | `TorchNPU-version` | `2.10.0.post2` | Full TorchNPU version used by the image, including suffixes such as `.postN` |
 | `chip` | `910b` or `a3` | Ascend chip model supported by the image |
@@ -94,8 +94,8 @@ Driver, firmware, CANN, TorchNPU, and the target Ascend hardware must be mutuall
 The following example starts the latest A2 Ubuntu image with one NPU. Adjust `DOCKER_IMAGE` and the `--device` options for your environment.
 
 ```bash
-CONTAINER_NAME=llamafactory-npu
-DOCKER_IMAGE=hiyouga/llamafactory:latest-910b-ubuntu
+CONTAINER_NAME=omnitune-npu
+DOCKER_IMAGE=hiyouga/omnitune:latest-910b-ubuntu
 
 docker run --rm -it \
   --net=host \
@@ -121,7 +121,7 @@ Verify the runtime inside the container:
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 npu-smi info
 python -c "import torch, torch_npu; print(torch.__version__, torch_npu.__version__, torch.npu.is_available())"
-llamafactory-cli help
+omnitune help
 ```
 
 ### Build Locally
@@ -133,7 +133,7 @@ docker build \
   -f ./docker/docker-npu/Dockerfile \
   --build-arg BASE_IMAGE=quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12 \
   --build-arg PIP_INDEX=https://pypi.org/simple \
-  -t llamafactory:npu-910b-ubuntu \
+  -t omnitune:npu-910b-ubuntu \
   .
 ```
 
@@ -178,8 +178,8 @@ To build an image with Docker Compose without starting a container, use `docker 
 
 ## License and Disclaimer
 
-LlamaFactory is distributed under the [Apache License 2.0](../../LICENSE).
+OmniTune is distributed under the [Apache License 2.0](../../LICENSE).
 
-Ascend CANN, TorchNPU, Triton Ascend, DeepSpeed, base operating-system packages, model weights, datasets, and other third-party components are governed by their respective licenses and terms. The LlamaFactory license does not replace or override those terms.
+Ascend CANN, TorchNPU, Triton Ascend, DeepSpeed, base operating-system packages, model weights, datasets, and other third-party components are governed by their respective licenses and terms. The OmniTune license does not replace or override those terms.
 
 The image is provided on an "AS IS" basis, without warranties or conditions of any kind. Users are responsible for validating hardware and software compatibility, securing the container and its runtime configuration, complying with applicable licenses and laws, and reviewing model and dataset terms before training, evaluation, or deployment.
