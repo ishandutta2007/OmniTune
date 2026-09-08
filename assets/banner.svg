@@ -1,237 +1,200 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080B14" />
-      <stop offset="50%" stop-color="#0D1322" />
-      <stop offset="100%" stop-color="#05070D" />
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="45%" stop-color="#0c1222" />
+      <stop offset="100%" stop-color="#05070d" />
     </linearGradient>
 
-    <!-- Glowing Accents -->
+    <!-- Vibrant Brand Linear Gradient -->
     <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8">
-        <animate attributeName="stop-color" values="#38BDF8; #818CF8; #C084FC; #38BDF8" dur="8s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="50%" stop-color="#818CF8">
-        <animate attributeName="stop-color" values="#818CF8; #C084FC; #38BDF8; #818CF8" dur="8s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#C084FC">
-        <animate attributeName="stop-color" values="#C084FC; #38BDF8; #818CF8; #C084FC" dur="8s" repeatCount="indefinite" />
-      </stop>
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
-    <linearGradient id="glow-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#9333EA" stop-opacity="0.6" />
+    <!-- Card Background Gradient -->
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
     </linearGradient>
 
-    <radialGradient id="mesh-glow" cx="75%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.25">
-        <animate attributeName="stop-opacity" values="0.15; 0.35; 0.15" dur="5s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#080B14" stop-opacity="0" />
+    <!-- Ambient Glows -->
+    <radialGradient id="glow-cyan" cx="20%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#070913" stop-opacity="0" />
     </radialGradient>
 
-    <radialGradient id="pulse-glow" cx="20%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.2">
-        <animate attributeName="stop-opacity" values="0.25; 0.08; 0.25" dur="6s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#080B14" stop-opacity="0" />
+    <radialGradient id="glow-purple" cx="80%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.28" />
+      <stop offset="60%" stop-color="#4f46e5" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#070913" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Filters -->
-    <filter id="blur-filter" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="16" result="blur" />
-    </filter>
-    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <radialGradient id="orb-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-opacity="0.6" />
+    <!-- Subtle Dot / Grid Pattern -->
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.35" />
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.35" />
     </pattern>
   </defs>
 
-  <style>
-    @keyframes waveMotion {
-      0% { transform: translateX(0px) translateY(0px); }
-      50% { transform: translateX(-40px) translateY(10px); }
-      100% { transform: translateX(0px) translateY(0px); }
-    }
-    @keyframes waveAlt {
-      0% { transform: translateX(0px) translateY(0px); }
-      50% { transform: translateX(40px) translateY(-12px); }
-      100% { transform: translateX(0px) translateY(0px); }
-    }
-    @keyframes pulseScale {
-      0%, 100% { transform: scale(1); opacity: 0.85; }
-      50% { transform: scale(1.18); opacity: 1; filter: drop-shadow(0 0 12px #38BDF8); }
-    }
-    @keyframes floatChip {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-    .wave-1 { animation: waveMotion 10s ease-in-out infinite; }
-    .wave-2 { animation: waveAlt 12s ease-in-out infinite; }
-    .node-pulse { animation: pulseScale 3.5s ease-in-out infinite; transform-origin: center; }
-    .chip-float { animation: floatChip 6s ease-in-out infinite; }
-    .font-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: -1.5px; }
-    .font-subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0.5px; }
-    .font-badge { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
-  </style>
-
   <!-- Background Base -->
   <rect width="100%" height="100%" fill="url(#bg-grad)" rx="16" />
-  <rect width="100%" height="100%" fill="url(#pulse-glow)" />
-  <rect width="100%" height="100%" fill="url(#mesh-glow)" />
-  <rect width="100%" height="100%" fill="url(#cyber-grid)" rx="16" />
+  <rect width="100%" height="100%" fill="url(#glow-cyan)" rx="16" />
+  <rect width="100%" height="100%" fill="url(#glow-purple)" rx="16" />
+  <rect width="100%" height="100%" fill="url(#grid-pattern)" rx="16" />
 
-  <!-- Animated Ambient Lights / Neon Waves in Background -->
-  <g opacity="0.35" class="wave-1">
-    <path d="M-100 280 Q 250 140, 600 260 T 1300 180" fill="none" stroke="url(#brand-grad)" stroke-width="3" filter="url(#neon-glow)">
-      <animate attributeName="d"
-        values="M-100 280 Q 250 140, 600 260 T 1300 180;
-                M-100 260 Q 250 320, 600 180 T 1300 240;
-                M-100 280 Q 250 140, 600 260 T 1300 180"
-        dur="12s" repeatCount="indefinite" />
-    </path>
+  <!-- Ambient Flow Waves -->
+  <g opacity="0.3">
+    <path d="M-50 260 C 200 160, 450 320, 800 210 C 980 150, 1120 220, 1250 180" fill="none" stroke="url(#brand-grad)" stroke-width="2.5" />
+    <path d="M-50 290 C 250 210, 520 350, 850 250 C 1020 200, 1140 270, 1250 230" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" />
+    <path d="M-50 180 C 300 290, 600 130, 920 280 C 1050 330, 1160 250, 1250 270" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="6 8" />
   </g>
 
-  <g opacity="0.25" class="wave-2">
-    <path d="M-100 220 Q 350 340, 750 200 T 1300 300" fill="none" stroke="url(#glow-grad)" stroke-width="2" filter="url(#blur-filter)">
-      <animate attributeName="d"
-        values="M-100 220 Q 350 340, 750 200 T 1300 300;
-                M-100 240 Q 350 160, 750 280 T 1300 190;
-                M-100 220 Q 350 340, 750 200 T 1300 300"
-        dur="14s" repeatCount="indefinite" />
-    </path>
+  <!-- Right Graphic: AI Neural Tuning Core & Ecosystem Architecture -->
+  <g transform="translate(900, 210)">
+    <!-- Core Ambient Halo -->
+    <circle cx="0" cy="0" r="140" fill="url(#orb-glow)" />
+
+    <!-- Outer Orbital Tracks -->
+    <ellipse cx="0" cy="0" rx="175" ry="70" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="7 9" stroke-opacity="0.45" transform="rotate(-25)" />
+    <ellipse cx="0" cy="0" rx="185" ry="75" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="5 7" stroke-opacity="0.45" transform="rotate(35)" />
+    <ellipse cx="0" cy="0" rx="195" ry="85" fill="none" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.3" transform="rotate(-65)" />
+
+    <!-- Radial Network Connection Lines -->
+    <line x1="0" y1="0" x2="-120" y2="-65" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" />
+    <line x1="0" y1="0" x2="135" y2="-45" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.5" />
+    <line x1="0" y1="0" x2="-80" y2="90" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4" />
+    <line x1="0" y1="0" x2="110" y2="85" stroke="#f472b6" stroke-width="1.5" stroke-opacity="0.4" />
+    <line x1="0" y1="0" x2="0" y2="-120" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.45" />
+
+    <!-- Concentric Central Core Rings -->
+    <circle cx="0" cy="0" r="76" fill="#0b1120" stroke="#1e293b" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="64" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="50" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" stroke-opacity="0.8" />
+    <circle cx="0" cy="0" r="32" fill="url(#brand-grad)" opacity="0.9" />
+    <circle cx="0" cy="0" r="15" fill="#ffffff" opacity="0.9" />
+
+    <!-- Center Icon: Tuning Sliders / Waveform in Core -->
+    <g stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
+      <path d="M-8 -6 L-8 6 M-8 -2 L-5 -2" />
+      <path d="M0 -10 L0 10 M0 3 L3 3" />
+      <path d="M8 -7 L8 7 M8 -1 L11 -1" />
+    </g>
+
+    <!-- Satellite Nodes & Data Badges -->
+    <!-- Node 1: Models -->
+    <circle cx="-120" cy="-65" r="7" fill="#38bdf8" stroke="#0f172a" stroke-width="2" />
+    <g transform="translate(-215, -92)">
+      <rect width="105" height="26" rx="13" fill="#0f172a" fill-opacity="0.9" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.8" />
+      <text x="52" y="17" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" text-anchor="middle">100+ MODELS</text>
+    </g>
+
+    <!-- Node 2: LoRA & FSDP -->
+    <circle cx="135" cy="-45" r="7" fill="#818cf8" stroke="#0f172a" stroke-width="2" />
+    <g transform="translate(100, -78)">
+      <rect width="118" height="26" rx="13" fill="#0f172a" fill-opacity="0.9" stroke="#818cf8" stroke-width="1" stroke-opacity="0.8" />
+      <text x="59" y="17" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" text-anchor="middle">LoRA &amp; FSDP2</text>
+    </g>
+
+    <!-- Node 3: vLLM Inference -->
+    <circle cx="-80" cy="90" r="6" fill="#34d399" stroke="#0f172a" stroke-width="2" />
+    <g transform="translate(-165, 95)">
+      <rect width="112" height="26" rx="13" fill="#0f172a" fill-opacity="0.9" stroke="#34d399" stroke-width="1" stroke-opacity="0.8" />
+      <text x="56" y="17" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" text-anchor="middle">vLLM SERVING</text>
+    </g>
+
+    <!-- Node 4: Alignment -->
+    <circle cx="110" cy="85" r="6" fill="#f472b6" stroke="#0f172a" stroke-width="2" />
+    <g transform="translate(75, 95)">
+      <rect width="115" height="26" rx="13" fill="#0f172a" fill-opacity="0.9" stroke="#f472b6" stroke-width="1" stroke-opacity="0.8" />
+      <text x="57" y="17" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" text-anchor="middle">DPO &amp; ORPO</text>
+    </g>
+
+    <!-- Node 5: Top Multimodal -->
+    <circle cx="0" cy="-120" r="6.5" fill="#c084fc" stroke="#0f172a" stroke-width="2" />
+    <g transform="translate(-55, -150)">
+      <rect width="110" height="24" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#c084fc" stroke-width="1" stroke-opacity="0.8" />
+      <text x="55" y="16" fill="#e9d5ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.5" text-anchor="middle">LLMs + VLMs</text>
+    </g>
   </g>
 
-  <!-- High-tech Right Graphic Illustration (Tuning Neural Lattice) -->
-  <g transform="translate(850, 205)" class="chip-float">
-    <!-- Center Orb / Core -->
-    <circle cx="0" cy="0" r="80" fill="#0F172A" stroke="#334155" stroke-width="2" />
-    <circle cx="0" cy="0" r="70" fill="none" stroke="url(#brand-grad)" stroke-width="2.5" stroke-dasharray="12 6">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="0" cy="0" r="48" fill="#1E1B4B" stroke="#6366F1" stroke-width="1.5" opacity="0.8" />
-    
-    <!-- Central Pulsing AI Tuning Node -->
-    <circle cx="0" cy="0" r="18" fill="url(#brand-grad)" class="node-pulse" />
-
-    <!-- Orbital Ring 1 -->
-    <ellipse cx="0" cy="0" rx="140" ry="55" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" stroke-dasharray="6 8">
-      <animateTransform attributeName="transform" type="rotate" from="30" to="390" dur="24s" repeatCount="indefinite" />
-    </ellipse>
-
-    <!-- Orbital Ring 2 -->
-    <ellipse cx="0" cy="0" rx="150" ry="60" fill="none" stroke="#A855F7" stroke-width="1.5" opacity="0.5" stroke-dasharray="8 6">
-      <animateTransform attributeName="transform" type="rotate" from="-40" to="320" dur="28s" repeatCount="indefinite" />
-    </ellipse>
-
-    <!-- Satellite Nodes -->
+  <!-- Left Content Area: Hero Title, Subtitle, Capabilities, and Badges -->
+  <g transform="translate(70, 68)">
+    <!-- Top Pill: Category / Ecosystem -->
     <g>
-      <circle cx="-110" cy="-35" r="7" fill="#38BDF8" filter="url(#neon-glow)">
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite" />
-      </circle>
-      <line x1="-110" y1="-35" x2="0" y2="0" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.4" />
-      
-      <circle cx="120" cy="25" r="6" fill="#818CF8" filter="url(#neon-glow)">
-        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.2s" repeatCount="indefinite" />
-      </circle>
-      <line x1="120" y1="25" x2="0" y2="0" stroke="#818CF8" stroke-width="1" stroke-opacity="0.4" />
-
-      <circle cx="45" cy="-85" r="5" fill="#C084FC" filter="url(#neon-glow)">
-        <animate attributeName="opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite" />
-      </circle>
-      <line x1="45" y1="-85" x2="0" y2="0" stroke="#C084FC" stroke-width="1" stroke-opacity="0.3" />
-
-      <circle cx="-60" cy="80" r="5.5" fill="#34D399" filter="url(#neon-glow)">
-        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.6s" repeatCount="indefinite" />
-      </circle>
-      <line x1="-60" y1="80" x2="0" y2="0" stroke="#34D399" stroke-width="1" stroke-opacity="0.3" />
+      <rect width="232" height="30" rx="15" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" />
+      <!-- Indicator Circle -->
+      <circle cx="16" cy="15" r="4.5" fill="#38bdf8" />
+      <text x="32" y="19" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700" letter-spacing="1">UNIFIED FINE-TUNING</text>
     </g>
 
-    <!-- Floating Badge: 100+ LLMs -->
-    <g transform="translate(-130, -105)">
-      <rect width="105" height="28" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.8" />
-      <text x="52" y="18" text-anchor="middle" fill="#38BDF8" class="font-badge">100+ MODELS</text>
+    <!-- Main Title: OmniTune with Gradient Fill & Soft Depth -->
+    <g transform="translate(0, 84)">
+      <!-- Soft Shadow Duplicate -->
+      <text x="0" y="0" fill="#0284c7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="66" font-weight="900" letter-spacing="-1.5" opacity="0.3" dx="2" dy="3">OmniTune</text>
+      <!-- Main Text -->
+      <text x="0" y="0" fill="url(#brand-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="66" font-weight="900" letter-spacing="-1.5">OmniTune</text>
     </g>
 
-    <!-- Floating Badge: LoRA / FSDP2 -->
-    <g transform="translate(40, 95)">
-      <rect width="115" height="28" rx="14" fill="#0F172A" stroke="#A855F7" stroke-width="1" stroke-opacity="0.8" />
-      <text x="57" y="18" text-anchor="middle" fill="#C084FC" class="font-badge">LORA &bull; FSDP2</text>
-    </g>
-  </g>
-
-  <!-- Left Content Area (Branding & Typography) -->
-  <g transform="translate(80, 80)">
-    <!-- Top Pill Tag -->
-    <g transform="translate(0, 10)">
-      <rect width="215" height="30" rx="15" fill="#1E293B" fill-opacity="0.75" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.5" />
-      <circle cx="16" cy="15" r="4.5" fill="#38BDF8">
-        <animate attributeName="opacity" values="1; 0.3; 1" dur="2s" repeatCount="indefinite" />
-      </circle>
-      <text x="30" y="19.5" fill="#E2E8F0" class="font-badge">UNIFIED FINE-TUNING</text>
-    </g>
-
-    <!-- Main Title: OmniTune -->
-    <g transform="translate(0, 95)">
-      <text x="0" y="0" fill="url(#brand-grad)" class="font-title" font-size="64" filter="url(#neon-glow)">OmniTune</text>
-    </g>
-
-    <!-- Subtitle -->
-    <g transform="translate(0, 138)">
-      <text x="0" y="0" fill="#F8FAFC" class="font-title" font-size="22" opacity="0.95">
-        Frontier Fine-Tuning, Alignment &amp; Deployment for 100+ LLMs &amp; VLMs
+    <!-- Tagline / Headline -->
+    <g transform="translate(0, 132)">
+      <text x="0" y="0" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="-0.2">
+        Frontier Fine-Tuning, Alignment &amp; Serving for 100+ LLMs &amp; VLMs
       </text>
     </g>
 
-    <!-- Description / Capabilities line -->
-    <g transform="translate(0, 172)">
-      <text x="0" y="0" fill="#94A3B8" class="font-subtitle" font-size="15">
+    <!-- Technical Details Line -->
+    <g transform="translate(0, 168)">
+      <text x="0" y="0" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400">
         Production-grade SFT, DPO, PPO &amp; KTO with DeepSpeed, FSDP2, Liger Kernel &amp; vLLM.
       </text>
     </g>
 
-    <!-- Feature Badges Row -->
-    <g transform="translate(0, 215)">
-      <!-- Badge 1: SFT & Preference Tuning -->
+    <!-- Feature Pillars Badges (4 Cards) -->
+    <g transform="translate(0, 212)">
+      <!-- Card 1: SFT & Preference Tuning -->
       <g transform="translate(0, 0)">
-        <rect width="150" height="34" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1" />
-        <path d="M16 17 L22 23 L32 11" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="40" y="21" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">SFT / DPO / KTO</text>
+        <rect width="158" height="40" rx="9" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+        <circle cx="20" cy="20" r="9" fill="#0284c7" fill-opacity="0.25" />
+        <path d="M16 20.5 L19 23.5 L24 16.5" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="38" y="24" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600">SFT &bull; DPO &bull; KTO</text>
       </g>
 
-      <!-- Badge 2: Multi-Modal VLMs -->
-      <g transform="translate(162, 0)">
-        <rect width="140" height="34" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1" />
-        <path d="M16 17 L22 23 L32 11" fill="none" stroke="#818CF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="36" y="21" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">LLMs &amp; VLMs</text>
+      <!-- Card 2: 100+ Multimodal Models -->
+      <g transform="translate(170, 0)">
+        <rect width="152" height="40" rx="9" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+        <circle cx="20" cy="20" r="9" fill="#4f46e5" fill-opacity="0.25" />
+        <path d="M15 24 L19 16 L22 21 L24 18 L26 24 Z" fill="none" stroke="#818cf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="37" y="24" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600">LLMs &amp; VLMs</text>
       </g>
 
-      <!-- Badge 3: Web UI Board -->
-      <g transform="translate(314, 0)">
-        <rect width="155" height="34" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1" />
-        <path d="M16 17 L22 23 L32 11" fill="none" stroke="#C084FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="36" y="21" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">OmniTune-Board</text>
+      <!-- Card 3: OmniTune-Board Web UI -->
+      <g transform="translate(334, 0)">
+        <rect width="170" height="40" rx="9" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+        <circle cx="20" cy="20" r="9" fill="#7c3aed" fill-opacity="0.25" />
+        <rect x="14" y="15" width="12" height="10" rx="2" fill="none" stroke="#c084fc" stroke-width="1.8" />
+        <line x1="14" y1="18" x2="26" y2="18" stroke="#c084fc" stroke-width="1.5" />
+        <text x="37" y="24" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600">OmniTune-Board</text>
       </g>
 
-      <!-- Badge 4: High Throughput -->
-      <g transform="translate(481, 0)">
-        <rect width="148" height="34" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1" />
-        <path d="M16 17 L22 23 L32 11" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="36" y="21" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">vLLM Inference</text>
+      <!-- Card 4: vLLM & DeepSpeed High Throughput -->
+      <g transform="translate(516, 0)">
+        <rect width="168" height="40" rx="9" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+        <circle cx="20" cy="20" r="9" fill="#059669" fill-opacity="0.25" />
+        <path d="M21 14 L16 20 L20 20 L19 26 L25 19 L21 19 Z" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="37" y="24" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600">vLLM &amp; DeepSpeed</text>
       </g>
     </g>
   </g>
 
-  <!-- Border Highlight Outline -->
-  <rect x="1" y="1" width="1198" height="418" rx="15" fill="none" stroke="url(#brand-grad)" stroke-width="1.25" stroke-opacity="0.4" />
+  <!-- Border Frame Accent -->
+  <rect x="1" y="1" width="1198" height="418" rx="15" fill="none" stroke="url(#brand-grad)" stroke-width="1.5" stroke-opacity="0.45" />
 </svg>
